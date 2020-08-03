@@ -1,0 +1,17 @@
+body{
+	margin: 100px;
+}
+
+#Counter{
+	padding: 100px;
+	background: #777;
+	border-radius: 20px;
+}
+
+#Counter .sec{
+	text-align: center;
+}
+#Counter .text{
+	font-size: 22px;
+	font-family: sans-serif;
+}

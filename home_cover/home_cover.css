@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  right: 0;
+  background-color: cadetblue;
+}
+
+#HomeCover1 .Container{
+  position: relative;
+}
+#HomeCover1 .cover{
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  justify-items: flex-start;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+}
+#HomeCover1 .cover.active{
+  height: 100%;
+}
+#HomeCover1 .bg_img{
+  position: relative;
+  transition: transform 1s;
+  transform: scale(1.5);
+}
+#HomeCover1 .bg_img:after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.2;
+}
+#HomeCover1 .cover.active .bg_img{
+  transform: scale(1);
+}
+#HomeCover1 .imgContainer{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#HomeCover1 .bg_img{
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;;
+  background-attachment: fixed !important;;
+}
+#HomeCover1 .captionContainer{
+  position: absolute;
+  padding: 3%;
+  margin: 3%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-family: sans-serif;
+  transform: translateY(100px);
+  transition: transform 1s;
+}
+#HomeCover1 .cover.active .captionContainer{
+  transform: translateY(0);
+}
+#HomeCover1 .btn{
+  border: 1px solid #3217;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+}
+#HomeCover1 .indicators{
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 10px;
+  top: 0;
+  right: 0;
+}
+#HomeCover1 .indicate{
+  line-height: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+#HomeCover1 .indicate.active{
+  color: green;
+}
+#HomeCover1 .indicate:after{
+  content: 'o';
+  color: inherit;
+  background: inherit;
+}

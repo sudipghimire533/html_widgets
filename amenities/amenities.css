@@ -1,0 +1,57 @@
+body{
+  margin: 100px 150px;
+  text-align: center;
+}
+body:before{
+  content: 'Add A more smooth font for better reasult';
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+#Amenities{
+  text-align: left;
+}
+#Amenities .label{
+  font-size: 26px;
+}
+#Amenities .Grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#Amenities .amenities{
+  margin: 5px;
+  border: 2px solid #3214;
+  padding: 10px;
+  width: 270px;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#Amenities .topic{
+  font-size: 18px;
+  cursor: pointer;
+  font-family: sans-serif;
+  position: relative;
+}
+#Amenities .lb{
+  line-height: 24px;
+  padding: 2px 0;
+  transition: transform .3s;
+}
+#Amenities .lb:before{
+  color: rgb(134, 221, 182);
+}
+#Amenities .lb:hover,
+#Amenities .lb:active,
+#Amenities .lb:focus{
+  transform: translateX(5px);
+}

@@ -1,0 +1,89 @@
+body{
+  margin: 150px;
+}
+
+
+.heading{
+  position: relative;
+  text-align: center;
+  font-size: 28px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+.heading:before{
+  content: "\23AF\23AF\23AF\23AF\2002\25CF\2002\23AF\23AF\23AF\23AF";
+	position: absolute;
+	color: #FFAC33;
+	font-weight: bold;
+	bottom: -22px;
+  font-size: 22px;
+	text-align: center;
+	padding-top: 5px;
+}
+#Person .Grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#Person .person{
+  margin: 20px 10px;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#Person .top{
+  position: relative;
+}
+#Person .cover_info{
+  position: absolute;
+  display: inline-block;
+  background: rgba(41, 41, 41, 0.7);
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all .5s;
+  top: 100%;
+}
+#Person .cover_info > span{
+  position: absolute;
+  top: 30%;
+  padding: 10px;
+}
+#Person .person:hover .cover_info,
+#Person .person:active .cover_info,
+#Person .person:focus .cover_info{
+  top: 0;
+}
+#Person .top{
+  cursor: pointer;
+  min-height: 270px;
+  width: 270px;
+  overflow: hidden;
+}
+#Person img{
+  width: 270px;
+  height: auto;
+}
+#Person .bottom{
+  text-align: center;
+  padding: 15px 0;
+  background-color: #777;
+  position: relative;
+  display: block;
+}
+#Person .name{
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  
+}
+#Person .name:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  border-bottom: 3px solid #30AD74;
+}

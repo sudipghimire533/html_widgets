@@ -1,0 +1,186 @@
+body{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.parent{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.parent > *{
+  max-height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#SideBar{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0;
+  box-sizing: border-box;
+  background: lightslategray;
+  overflow-x: hidden;
+  position: static;
+  min-height: 100vh;
+  max-height: 100vh;
+  outline: none;
+  width: auto;
+}
+#SideBar .Container{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 1;
+  transition-property: width, opacity;
+  transition-duration: 1s;
+  width: 270px;
+}
+#SideBar .Container > *{
+  margin: 10px 0;
+}
+#SideBar .imgContainer{
+  margin-top: 50px;
+  position: relative;
+  display: block;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.imgContainer:after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: red;
+  opacity: 0.1;
+  left: 0;
+}
+#SideBar .imgContainer img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#SideBar .title{
+  font-size: 22px;
+  position: relative;
+}
+#SideBar .info{
+  font-size: 12px;
+  margin-top: 7px;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#SideBar .itemShop{
+  margin-top: 50px;
+  position: relative;
+  display: block;
+  display: inline-flex;
+  flex-direction: column;
+  align-content:space-between;
+  align-items:center;
+  list-style: none;
+}
+#SideBar .itemShop > li{
+  flex: 1;
+  position: relative;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+#SideBar .itemShop > li a:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: aqua;
+  scale: 0;
+  transition: scale .5s;
+}
+#SideBar .itemShop a{
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+#SideBar .itemShop > li.active{
+  color: #55F;
+}
+#SideBar .itemShop > li.active a:before,
+#SideBar .itemShop > li:hover a:before,
+#SideBar .itemShop > li:active a:before,
+#SideBar .itemShop > li:focus a:before{
+  scale: 1;
+}
+#SideBar .toggle{
+  position: absolute;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s;
+  z-index: 1;
+}
+
+
+.anything{
+  background: aquamarine;
+  align-self: stretch;
+  min-height: 100vh;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+
+@media only screen and (max-width: 800px){
+  #SideBar .Container{
+    width: 0;
+    opacity: 0;
+  }.anything{
+    flex-basis: 100%;
+  }
+  #SideBar .toggle{
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+  }
+  #SideBar{
+    z-index: 1;
+  }
+  /**/
+  #SideBar{
+    position: absolute;
+  }
+  #SideBar:focus .Container,
+  #SideBar:hover .Container,
+  #SideBar:active .Container{
+    width: 270px;
+    opacity: 1;
+  }
+  #SideBar:focus .toggle,
+  #SideBar:active .toggle{
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 300px){
+  #SideBar:focus .Container,
+  #SideBar:hover .Container,
+  #SideBar:active .Container{
+    width: 100vw;
+  }
+}

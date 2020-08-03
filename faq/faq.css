@@ -1,0 +1,46 @@
+body{
+  margin: 200px;
+}
+
+
+#Faq .Container{
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#Faq .heading{
+  padding: 10px;
+  background: #777;
+  font-size: 22px;
+}
+#Faq .qas{
+  cursor: pointer;
+}
+#Faq .qn{
+  margin: 15px 20px;
+}
+#Faq .ans{
+  padding: 0 20px;
+  overflow: hidden;
+}
+#Faq .ans{
+  height: 0;
+  transition: height .5s;
+  position: relative;
+}
+#Faq .ans:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background-color: #777;
+  height: 0;
+  width: 100%;
+  transition: height 1s;
+}
+#Faq .qas:hover .ans{
+  height: 1000%;
+}
+#Faq .qas:hover .ans:after{
+  height: 0;
+}

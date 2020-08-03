@@ -1,0 +1,26 @@
+/* Temp code  -> this should be removed in production */
+body{
+	font-size: 32px;
+	text-align: center;
+	margin: 100px;
+}
+/*END Temo Code*/
+#TypeWriter .text{
+	display: none;
+}
+.board{
+	position: relative;
+	display: inline-block;
+	font-size: inherit;
+	text-decoration: inherit;
+	color: inherit;
+}
+@keyframes blink{
+	from {opacity: 0;} to {opacity: 1;}
+}
+.board::after{
+	content: '|';
+	font-weight: bold;
+	animation: blink .5s infinite;
+	filter:invert(1);
+}
