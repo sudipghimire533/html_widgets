@@ -151,7 +151,8 @@ body{
   #SideBar .Container{
     width: 0;
     opacity: 0;
-  }.anything{
+  }
+  .anything{
     flex-basis: 100%;
   }
   #SideBar .toggle{
@@ -184,3 +185,8 @@ body{
     width: 100vw;
   }
 }
+/* TO DO 
+In chrome the sidebar's scroll bar appears even in hidden state 
+after showing for one time so fix that by making #sidebar width: 0;
+but this break the transition to hide the sidebar. so think and fix
+*/

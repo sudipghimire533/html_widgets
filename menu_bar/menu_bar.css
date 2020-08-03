@@ -43,7 +43,7 @@ body{
   flex-wrap: wrap;
   align-items: center;
 }
-#MenuBar .locations{
+#MenuBar .location{
   margin: 5px 10px;
   padding: 5px 0;
   box-sizing: border-box;
@@ -53,13 +53,13 @@ body{
   text-transform: uppercase;
   letter-spacing: 0px;
 }
-#MenuBar .locations.hilight{
+#MenuBar .location.hilight{
   background: rgb(92, 167, 133);
   border: 2px solid rgb(92, 167, 133);
   transition: background .7s;
 }
-#MenuBar .locations:after,
-#MenuBar .locations:before{
+#MenuBar .location:after,
+#MenuBar .location:before{
   content: '';
   position: absolute;
   height: 2px;
@@ -69,26 +69,26 @@ body{
   bottom: 0;
   left: 0;
 }
-#MenuBar .locations:before{
+#MenuBar .location:before{
   background-color: #777;
   transition: none;
 }
-#MenuBar .locations.active,
-#MenuBar .locations:hover,
-#MenuBar .locations:focus{
+#MenuBar .location.active,
+#MenuBar .location:hover,
+#MenuBar .location:focus{
   color: #4458dc;
 }
-#MenuBar .locations.active:after,
-#MenuBar .locations:hover:after,
-#MenuBar .locations:focus:after{
+#MenuBar .location.active:after,
+#MenuBar .location:hover:after,
+#MenuBar .location:focus:after{
  width: 40px;
 }
-#MenuBar .locations.hilight:after,
-#MenuBar .locations.hilight:before{
+#MenuBar .location.hilight:after,
+#MenuBar .location.hilight:before{
   display: none;
 }
-#MenuBar .locations.hilight:hover,
-#MenuBar .locations.hilight:focus{
+#MenuBar .location.hilight:hover,
+#MenuBar .location.hilight:focus{
   color: unset;
   background: transparent;
 }
@@ -100,7 +100,7 @@ body{
   font-size: 14px;
   line-height: 20px;
 }
-#MenuBar .locations.hilight a{
+#MenuBar .location.hilight a{
   padding: 5px 10px;
 }
 
@@ -126,19 +126,19 @@ body{
     align-items: flex-start;
     width: 100%;
   }
-  #MenuBar.hide .locations:before{
+  #MenuBar.hide .location:before{
     width: 100%;
   }
-  #MenuBar.hide .locations{
+  #MenuBar.hide .location{
     padding-left: 0;
     padding-right: 0;
     width: calc(100% - 10px); /*offset for margin or padding */
   }
-  #MenuBar.hide .locations.active:after,
-  #MenuBar.hide .locations:hover:after,
-  #MenuBar.hide .locations:focus:after{
+  #MenuBar.hide .location.active:after,
+  #MenuBar.hide .location:hover:after,
+  #MenuBar.hide .location:focus:after{
     width: 100%;
   }
-  #MenuBar.hide .locations.hilight{
+  #MenuBar.hide .location.hilight{
     padding: 10px 0;
   }
