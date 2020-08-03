@@ -1,10 +1,10 @@
 body{
-  margin: 200px;
+  max-width: 600px;
+  padding: 10vh 10vw;
 }
 
-
 #Faq .Container{
-  border: 2px solid blueviolet;
+  border: 2px solid bisque;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -22,25 +22,12 @@ body{
 #Faq .ans{
   padding: 0 20px;
   overflow: hidden;
+  max-height: 0px;
+  transition: all 1s;
 }
-#Faq .ans{
-  height: 0;
-  transition: height .5s;
-  position: relative;
-}
-#Faq .ans:after{
-  position: absolute;
-  content: '';
-  left: 0;
-  bottom: 0;
-  background-color: #777;
-  height: 0;
-  width: 100%;
-  transition: height 1s;
-}
-#Faq .qas:hover .ans{
-  height: 1000%;
-}
-#Faq .qas:hover .ans:after{
-  height: 0;
+#Faq .qas:hover .ans,
+#Faq .qas:focus .ans,
+#Faq .qas:active .ans{
+  max-height: 100vh;
+  transition-duration: 2s;
 }

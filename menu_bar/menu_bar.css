@@ -1,0 +1,144 @@
+body{
+  margin: 0;
+}
+
+#MenuBar{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#MenuBar .Container{
+  border-bottom: 1px solid white;
+  background-color: black;
+  
+}
+#MenuBar .wrapper{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+#MenuBar .logo{
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  transition: opacity .5s;
+}
+#MenuBar .logo:hover{
+  opacity: 1;
+}
+#MenuBar .menu_toggler{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;
+  font-family: monospace;
+}
+#MenuBar .navigation{
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#MenuBar .locations{
+  margin: 5px 10px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  transition: color .7s;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+#MenuBar .locations.hilight{
+  background: rgb(92, 167, 133);
+  border: 2px solid rgb(92, 167, 133);
+  transition: background .7s;
+}
+#MenuBar .locations:after,
+#MenuBar .locations:before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #4458dc;
+  width: 0;
+  transition: width .7s;
+  bottom: 0;
+  left: 0;
+}
+#MenuBar .locations:before{
+  background-color: #777;
+  transition: none;
+}
+#MenuBar .locations.active,
+#MenuBar .locations:hover,
+#MenuBar .locations:focus{
+  color: #4458dc;
+}
+#MenuBar .locations.active:after,
+#MenuBar .locations:hover:after,
+#MenuBar .locations:focus:after{
+ width: 40px;
+}
+#MenuBar .locations.hilight:after,
+#MenuBar .locations.hilight:before{
+  display: none;
+}
+#MenuBar .locations.hilight:hover,
+#MenuBar .locations.hilight:focus{
+  color: unset;
+  background: transparent;
+}
+#MenuBar .nav > a{
+  text-decoration: none;
+  color: inherit;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+#MenuBar .locations.hilight a{
+  padding: 5px 10px;
+}
+
+#MenuBar.hide .menu_toggler{
+    display: inline-block;
+  }
+  #MenuBar.hide .navigation{
+    max-height: 0;
+    transition: all 1s;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+  #MenuBar.hide .navigation.show{
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  #MenuBar.hide .wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #MenuBar.hide .navigation{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #MenuBar.hide .locations:before{
+    width: 100%;
+  }
+  #MenuBar.hide .locations{
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(100% - 10px); /*offset for margin or padding */
+  }
+  #MenuBar.hide .locations.active:after,
+  #MenuBar.hide .locations:hover:after,
+  #MenuBar.hide .locations:focus:after{
+    width: 100%;
+  }
+  #MenuBar.hide .locations.hilight{
+    padding: 10px 0;
+  }
