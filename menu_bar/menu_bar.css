@@ -52,6 +52,7 @@ body{
   transition: color .7s;
   text-transform: uppercase;
   letter-spacing: 0px;
+  color: white;
 }
 #MenuBar .location.hilight{
   background: rgb(92, 167, 133);
