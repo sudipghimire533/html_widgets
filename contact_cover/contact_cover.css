@@ -65,6 +65,9 @@ body{
   flex-direction: column;
   justify-content: center;
   font-family: sans-serif;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 #contactCover .box > * {
   margin: 15px 0;
@@ -89,7 +92,7 @@ body{
   text-transform: uppercase;
 }
 #contactCover .conclude.btn{
-  padding: 15px 10px;
+  padding: 12px;
   background: #30AD74;
   color: white;
   outline: none;
@@ -98,6 +101,7 @@ body{
   font-size: 18px;
   transition-property: color, background;
   transition-duration: 1.5s;
+  max-width: 300px;
 }
 #contactCover .conclude.btn:hover,
 #contactCover .conclude.btn:focus{
