@@ -1,6 +1,10 @@
 body{
   margin: 100px 200px;
 }
+
+/* The Width of following element must be less than ore euqal to the combiled length of 
+    The element to slide(element inside .wrapper), otherwise it will create gap
+*/
 #Slider .Container{
   background: #777;
   position: relative;
@@ -15,7 +19,7 @@ body{
   flex-direction: row;
   flex-wrap: nowrap;
   cursor: pointer;
-  animation: slide 30s infinite;
+  animation: slide 15s infinite linear;
   transform: translate3d(0, 0, 0);/*use gpu and hardware acceleration if available*/
 }
 #Slider .wrapper:hover{
@@ -46,4 +50,5 @@ body{
   transition: all 3s;
   flex: 1;
   transform: translate3d(0,0,0);
+  user-select: none;
 }
