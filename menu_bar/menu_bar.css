@@ -93,7 +93,7 @@ body{
   color: unset;
   background: transparent;
 }
-#MenuBar .nav > a{
+#MenuBar nav > a{
   text-decoration: none;
   color: inherit;
   font-family: sans-serif;
