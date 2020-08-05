@@ -1,0 +1,49 @@
+body{
+  margin: 100px 200px;
+}
+#Slider .Container{
+  background: #777;
+  position: relative;
+  display: inline-block;
+  max-width: 600px;
+  width: 600px;
+  overflow-x: hidden;
+}
+#Slider .wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  animation: slide 30s infinite;
+  transform: translate3d(0, 0, 0);/*use gpu and hardware acceleration if available*/
+}
+#Slider .wrapper:hover{
+  animation-play-state: paused;
+}
+@keyframes slide{
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(calc(-100% - 150px));
+  }
+}
+#Slider .box{
+  position: relative;
+  display: block;
+  padding: 0;
+  height: 100px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  background-color: var(--color);
+  text-align: center;
+  font-size: 72px;
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+  transition: all 3s;
+  flex: 1;
+  transform: translate3d(0,0,0);
+}
