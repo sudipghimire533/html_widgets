@@ -1,7 +1,6 @@
 body{
   margin: 0;
   right: 0;
-  background-color: cadetblue;
 }
 
 #HomeCover1 .Container{
@@ -21,8 +20,9 @@ body{
 }
 #HomeCover1 .bg_img{
   position: relative;
-  transition: transform 1s;
-  transform: scale(1.5);
+  transition: all 1s;
+  filter: blur(10px);
+  transform: scale(1.2);
 }
 #HomeCover1 .bg_img:after{
   content: '';
@@ -33,6 +33,7 @@ body{
   opacity: 0.2;
 }
 #HomeCover1 .cover.active .bg_img{
+  filter: blur(0px);
   transform: scale(1);
 }
 #HomeCover1 .imgContainer{
