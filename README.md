@@ -1,4 +1,4 @@
 # html_widgets
-The quick and easy widgets made with html, css and js
+The quick and easy widgets made with html, css and js.
 
-I am also currently looking for the job or paid side projects
+I will be really happy to know that you your own stuff here.
