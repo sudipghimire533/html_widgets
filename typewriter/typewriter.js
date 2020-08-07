@@ -14,15 +14,30 @@ let end_duration = 1000;
 function typewriter() {
 	let writings = document.querySelectorAll('#TypeWriter .text');
 	let board = document.querySelector('#TypeWriter .board');
-	let kth = 0
+	let kth = 0;
+	let er_th;
 	function type(elem, nth = 0) {
 		board.textContent = "";
+		function erase() {
+			board.textContent = board.textContent.substring(0, nth);
+			if (nth <= 0) {
+				/*
+					We don't have to wait to type after erasing last text
+					setTimeout(type, end_duration, writings[kth]);
+				*/
+				type(writings[kth]);
+			}
+			else {
+				nth = nth - 1;
+				setTimeout(erase, speed / 2);
+			}
+		}
 		function repeat() {
 			board.textContent += elem.textContent[nth];
 			nth++;
 			if (nth >= elem.textContent.length) {
 				kth = (kth >= writings.length - 1) ? 0 : kth + 1;
-				setTimeout(type, end_duration, writings[kth]);
+				setTimeout(erase, end_duration);
 			} else {
 				setTimeout(repeat, speed);
 			}
