@@ -9,7 +9,7 @@ body{
   box-sizing: border-box;
 }
 
-.block{
+#QuickTour .block{
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -32,14 +32,15 @@ body{
 #QuickTour .block:nth-of-type(odd){ flex-direction: row-reverse; }
 .block > *{ flex: 1; }
 
-.media_container{
+#QuickTour.media_container{
   background: #abcd;
   flex-basis: 60%;
   margin: 0 10px;
   text-align: center;
   display: inline-block;
 }
-.description, .info{
+#QuickTour .description,
+#QuickTour .info{
   flex-basis: 30%;
   padding: 20px;
   min-width: 300px;
@@ -47,15 +48,15 @@ body{
   color: #AAA;
   font-size: 14px;
 }
-.title{
+#QuickTour .title{
   font-size: 24px;
   color: #CCC;
 }
-.conc{
+#QuickTour .conc{
   font-size: 14px;
   cursor: pointer;
 }
-.tabbed .block{
+#QuickTour .tabbed .block{
   flex-direction: row !important;
   max-height: 0;
   overflow: hidden;
@@ -65,16 +66,16 @@ body{
   margin: 0;
   padding: 0;
 }
-.tabbed .block.active{
+#QuickTour .tabbed .block.active{
   max-height: 200vh;
   opacity: 1;
 }
-.tabs{
+#QuickTour .tabs{
   border-bottom: 2px solid #777;
   padding-bottom: 10px;
   margin-bottom: 30px;
 }
-.tb_switch{
+#QuickTour .tb_switch{
   margin: 0 5px;
   padding-bottom: 2px;
   cursor: pointer;
@@ -82,7 +83,7 @@ body{
   position: relative;
   display: inline-block;
 }
-.tb_switch:before{
+#QuickTour .tb_switch:before{
   position: absolute;
   content: '';
   height: 3px;
@@ -91,4 +92,4 @@ body{
   width: 0;
   transition: width .5s;
 }
-.tb_switch.active:before{ width: 100%; }
+#QuickTour .tb_switch.active:before{ width: 100%; }
