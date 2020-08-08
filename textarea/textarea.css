@@ -1,0 +1,17 @@
+body{
+  margin: 200px;
+}
+
+#TextArea .Container{
+  border: 2px solid red;
+  position: relative;
+  display: inline-block;
+}
+#TextArea textarea{
+  position: relative;
+  width: 600px;
+  height: 300px;
+  outline: none;
+  border: none;
+  overflow: auto;
+}

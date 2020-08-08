@@ -15,7 +15,6 @@ function typewriter() {
 	let writings = document.querySelectorAll('#TypeWriter .text');
 	let board = document.querySelector('#TypeWriter .board');
 	let kth = 0;
-	let er_th;
 	function type(elem, nth = 0) {
 		board.textContent = "";
 		function erase() {
@@ -44,5 +43,5 @@ function typewriter() {
 		}
 		repeat();
 	}
-	type(writings[kth]), 300;
+	type(writings[kth]);
 }
