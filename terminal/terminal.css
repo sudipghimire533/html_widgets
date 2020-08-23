@@ -1,0 +1,146 @@
+body{
+  margin: 20px 100px;
+}
+
+.Container{
+  border: 1px solid #777;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(0, 0, 0, .7);
+  display: inline-block;
+  min-width: 950px;
+  box-shadow: 5px 5px 20px 10px rgba(41, 41, 41, .3);
+  max-height: 500px;
+  overflow: auto;
+}
+.titleBar{
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 4px 10px;
+  background: #777;
+  position: sticky;
+  top: 0;
+}
+.body{
+  padding: 10px 7px;
+  height: 100%;
+}
+.titleBar > .title{
+  flex: 1;
+  text-align: center;
+  color: #DFDFDF;
+  font-family: monospace;
+  font-size: 16px;
+}
+.icon{
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: red;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.icon.icon-min{
+  background: yellow;
+}
+.icon.icon-max{
+  background: chartreuse;
+}
+.icon.icon-menu{
+  background: white;
+}
+.firstLine,
+.secondLine{
+  display: flex;
+  flex-flow: row wrap;
+}
+.preDec:before,
+.preDec:after,
+.postDec:after,
+.userName:after,
+.directory:before,
+.finPostDec:after,
+.scDec:before,
+.scDec:after,
+.command:after{
+  content: '\250F\2501[\2717';
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+.directory:before{
+  content: '[';
+}
+.finPostDec:after{
+  content: ']';
+}
+.preDec:after{
+  content: ']-[';
+  color: white;
+  font-weight: normal;
+}
+.postDec:after{
+  content: ']\2014';
+}
+.userName,
+.directory{
+  color: greenyellow;
+  font-family: monospace;
+  font-size: 16px;
+}
+.hostName{
+  color: aqua;
+  font-weight: bold;
+}
+.userName:after{
+  content: '@';
+  color: yellow;
+}
+.scDec:before{
+  content: '\2516\2500\2500\257C';
+}
+.scDec:after{
+  content: '$';
+  color: gold;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.command{
+  color: chartreuse;
+  font-family: monospace;
+  font-size: 16px;
+}
+@keyframes blink{
+  from {opacity: 1;} to {opacity: .2;}
+}
+.command:after{
+  content: '';
+}
+.entry:last-of-type .command:after{
+  content: '\2503';
+  color: inherit;
+  animation: blink .7s infinite;
+}
+.cn{
+  color: red;
+}
+.entry{
+  color: chartreuse;
+  margin: 5px 0;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 18px;
+}
+.figlet{
+  white-space: pre;
+}
+.body a{
+  color: inherit;
+  text-decoration: underline;
+}
+.body a i{
+  text-decoration: underline;
+  padding-right: 10px;
+}
